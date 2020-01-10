@@ -440,3 +440,9 @@ fonts-pt-serif:
     name: SIL Open Font License, 1.1
     url: //scripts.sil.org/OFL
     gpl-compatible: true
+
+
+google-adsense:
+  header: true
+  js:
+    https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js: { type: external, attributes: { async: true, data-ad-client: "ca-pub-4717349584566335" } }
