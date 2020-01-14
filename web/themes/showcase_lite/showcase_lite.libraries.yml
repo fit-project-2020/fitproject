@@ -369,6 +369,14 @@ theme-settings:
     theme:
       css/components/theme-settings.css: {}
 
+      
+fitproject:
+  version: 1.0
+  css:
+    theme:
+      css/fitproject/style.css: {}
+  
+
 maintenance-page:
   version: VERSION
   css:
@@ -423,7 +431,7 @@ fonts-sourcecodepro:
   version: VERSION
   remote: //fonts.googleapis.com/css
   css:
-    theme:
+    theme:0
       //fonts.googleapis.com/css?family=Source+Code+Pro&subset=latin,latin-ext: { type: external }
   license:
     name: SIL Open Font License, 1.1

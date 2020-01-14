@@ -690,7 +690,9 @@ function showcase_lite_page_attachments_alter(&$page) {
 
   //adsense
   $page['#attached']['library'][] = 'showcase_lite/google-adsense';
-
+  //fitproject
+  $page['#attached']['library'][] = 'showcase_lite/fitproject';
+ 
 }
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.

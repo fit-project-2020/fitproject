@@ -17,7 +17,17 @@
   {% if display_submitted %}
     {{ author_picture }}
   {% endif %}
-  {% if display_submitted or node.comment or (view_mode == "full" and mt_setting.reading_time) %}
+
+{% endblock %}
+{% block content %}
+  {{ attach_library('showcase_lite/node-article') }}
+  <div class="node__main-content-section">
+    {{ content.field_image }}	
+    {{ content.body}}	
+  </div>
+  {{ content.comment }}
+  
+{% if display_submitted or node.comment or (view_mode == "full" and mt_setting.reading_time) %}
     <div class="node__meta">
        <ul class="inline-list">
           {% if display_submitted or (node.comment and comment_count > 0) %}
@@ -51,7 +61,7 @@
                 {% trans %}less than 1 minute{% endtrans %}
               {% elseif minutes < 2 %}
                 {{ minutes }} {% trans %}minute{% endtrans %}
-              {% else %}
+   F           {% else %}
                 {{ minutes }} {% trans %}minutes{% endtrans %}
               {% endif %}
             </span>
@@ -60,11 +70,10 @@
       </ul>
     </div>
   {% endif %}
-{% endblock %}
-{% block content %}
-  {{ attach_library('showcase_lite/node-article') }}
-  <div class="node__main-content-section">
-    {{ content|without('comment') }}
-  </div>
-  {{ content.comment }}
+  {% if view_mode == 'teaser' %}
+<button class="teasr-leer-mas">
+<a href="{{ url }}">leer mas</a>
+</button>
+{% endif %}
+  
 {% endblock %}
